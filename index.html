@@ -182,12 +182,87 @@
       .trust-grid{grid-template-columns:1fr}
       footer{flex-direction:column;gap:1rem;padding:2rem 1.5rem;text-align:center}
     }
+
+    /* ── LOGO SVG ── */
+    :root{--pink:#FF88BC;--pink-pale:rgba(255,136,188,0.12);--pink-dim:rgba(255,136,188,0.5)}
+    .logo-svg{display:block;height:100%}
+    .logo-nav{height:36px;width:auto}
+    .logo-footer{height:26px;width:auto}
+    .logo-cta{height:64px;width:auto;opacity:.12}
+    .cta-logo{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;width:min(80vw,700px)}
+    .nav-logo{display:flex;align-items:center;text-decoration:none;line-height:1}
+    .footer-logo{display:flex;align-items:center}
+
+    /* ── PINK ACCENT USES ── */
+    .hero-eyebrow::before{background:var(--pink)}
+    .hero-eyebrow{color:var(--pink)}
+    .step:hover .step-num{color:var(--pink)!important}
+    .about-portrait-accent{background:linear-gradient(90deg,var(--cyan),var(--pink))}
+    .product-badge{background:var(--pink);color:#1E293B}
+    .trust-card::before{color:var(--pink-pale)}
+
+    /* ── PRODUCT IMAGE SECTION ── */
+    .section-product-images{padding:0 4rem 5rem;background:var(--dark);display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.5rem}
+    .product-img-card{position:relative;overflow:hidden;background:var(--dark-3);border:1px solid rgba(255,255,255,.06);cursor:default}
+    .product-img-card.tall{grid-row:span 2}
+    .product-img-placeholder{width:100%;aspect-ratio:4/3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;background:var(--dark-3);position:relative;overflow:hidden}
+    .product-img-card.tall .product-img-placeholder{aspect-ratio:unset;position:absolute;inset:0}
+    .product-img-placeholder::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,191,255,.04) 0%,rgba(255,136,188,.04) 100%)}
+    .placeholder-icon{font-size:2.5rem;opacity:.4}
+    .placeholder-label{font-family:'DM Sans',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--slate);text-align:center;max-width:180px;line-height:1.6;opacity:.7}
+    .placeholder-shot{font-size:.7rem;color:var(--pink);letter-spacing:.08em;text-align:center;max-width:200px;line-height:1.5;margin-top:.25rem;opacity:.9}
+    .product-img-caption{padding:.9rem 1.1rem;border-top:1px solid rgba(255,255,255,.05)}
+    .product-img-caption strong{display:block;font-size:.82rem;font-weight:600;color:var(--light);margin-bottom:.2rem}
+    .product-img-caption span{font-size:.75rem;color:var(--slate)}
+
+    /* ── HOW HERO IMAGE ── */
+    .how-hero-img{margin:0 4rem 3rem;position:relative;overflow:hidden;background:var(--dark-3);border:1px solid rgba(0,191,255,.08)}
+    .how-hero-placeholder{width:100%;height:320px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;position:relative;overflow:hidden}
+    .how-hero-placeholder::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,191,255,.06) 0%,rgba(255,136,188,.06) 100%)}
+    .how-hero-label{font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--slate);opacity:.8}
+    .how-hero-shot{font-size:.78rem;color:var(--pink);letter-spacing:.06em;margin-top:.25rem}
+
+    /* ── NAV CTA PINK TOUCH ── */
+    .nav-cta{border:1px solid var(--cyan)!important}
+
+    /* ── MOBILE ── */
+    @media(max-width:900px){
+      .logo-nav{height:28px}
+      .logo-cta{height:48px}
+      .section-product-images{grid-template-columns:1fr 1fr;padding:0 1.5rem 3rem}
+      .product-img-card.tall{grid-row:auto}
+      .product-img-card.tall .product-img-placeholder{position:relative;inset:auto}
+      .how-hero-img{margin:0 1.5rem 2rem}
+      .how-hero-placeholder{height:200px}
+    }
   </style>
 </head>
 <body>
 
 <nav>
-  <a href="#" class="nav-logo">VIA<span>NU</span></a>
+  <a href="#" class="nav-logo" aria-label="VIANU home">
+    <svg class="logo-svg logo-nav" viewBox="0 0 2000 550" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-miterlimit:2;">
+      <g transform="matrix(1.149589,0,0,1.149589,-145.231779,-112.430842)">
+        <g fill="white" stroke="white" stroke-width="6">
+          <g transform="matrix(1,0,0,1,-3,-384)"><path d="M527.638,510.233L289.803,946.94L158.304,510.233L221.078,510.233L307.661,801.371L460.806,510.233L527.638,510.233Z" style="fill-rule:nonzero;"/></g>
+          <g transform="matrix(1,0,0,1,-7,-384)"><path d="M643.985,510.233L592.576,928L530.615,928L582.024,510.233L643.985,510.233Z" style="fill-rule:nonzero;"/></g>
+          <g transform="matrix(1,0,0,1,-27,-384)"><path d="M778.19,829.782L727.322,928L659.949,928L891.02,480.47L1035.236,928L970.568,928L940.264,829.782L778.19,829.782ZM804.977,776.208L922.947,776.208L878.032,627.663L804.977,776.208Z" style="fill-rule:nonzero;"/></g>
+          <g transform="matrix(1,0,0,1,-29,-384)"><path d="M1490.612,510.233L1435.956,956.681L1182.428,633.074L1146.171,928L1084.21,928L1138.595,487.505L1392.123,810.571L1428.921,510.233L1490.612,510.233Z" style="fill-rule:nonzero;"/></g>
+          <g transform="matrix(1,0,0,1,-70,-384)"><path d="M1903.238,510.233L1872.934,757.538C1866.079,812.014 1853.272,851.878 1834.512,877.132C1804.388,916.455 1762.539,936.117 1708.966,936.117C1666.035,936.117 1630.229,923.13 1601.548,897.155C1573.047,870.819 1558.797,838.169 1558.797,799.207C1558.797,790.909 1559.113,782.16 1559.744,772.961C1560.375,763.761 1561.322,754.021 1562.585,743.739L1591.266,510.233L1652.957,510.233L1623.464,751.586C1622.562,758.801 1621.886,765.475 1621.435,771.608C1620.984,777.741 1620.758,783.423 1620.758,788.654C1620.758,816.433 1628.515,838.35 1644.028,854.404C1659.721,870.458 1681.006,878.485 1707.883,878.485C1739.27,878.485 1763.081,868.383 1779.315,848.181C1795.549,827.797 1806.553,794.697 1812.325,748.88L1841.547,510.233L1903.238,510.233Z" style="fill-rule:nonzero;"/></g>
+        </g>
+        <g id="foot-icon" transform="matrix(1.533829,0.35565,-0.413946,1.785248,721.898841,146.577762)">
+          <path d="M104.248,128.823C96.948,127.676 90.938,122.684 87.746,115.116C86.221,111.5 85.41,108.247 84.775,103.196C83.762,95.145 78.976,83.237 72.36,72.303C67.777,64.73 66.208,61.035 65.584,56.349C65.584,56.349 64.467,51.272 69.928,38.815C72.906,32.02 81.406,21.194 89.849,19.025C106.445,14.76 113.061,20.366 116.899,23.348C119.551,25.409 120.697,29.697 121.422,32.351C121.919,34.171 121.996,35.025 121.983,38.585C121.966,43.251 121.766,44.375 119.116,54.71C116.82,63.659 116.337,66.344 116.19,70.96C116.047,75.47 116.449,79.047 117.517,82.776C118.44,86 119.126,87.222 121.633,90.105C126.952,96.224 128.968,100.561 129.291,106.585C129.594,112.25 127.907,117.25 124.167,121.769C121.832,124.591 117.338,127.41 113.655,128.365C111.435,128.94 106.517,129.18 104.248,128.823Z" fill="#FF88BC" stroke="#FF88BC" stroke-width="0.51" stroke-linejoin="round"/>
+        </g>
+        <g fill="#FF88BC">
+          <g transform="matrix(4.622953,1.931428,-0.529391,1.267119,-3139.275799,-1781.616589)"><ellipse cx="896.5" cy="202.5" rx="1.5" ry="8.5"/></g>
+          <g transform="matrix(3.67824,1.536735,-0.401987,0.962174,-2342.63963,-1377.023193)"><ellipse cx="896.5" cy="202.5" rx="1.5" ry="8.5"/></g>
+          <g transform="matrix(3.919367,0.727715,-0.19036,1.025249,-2626.664254,-663.509721)"><ellipse cx="896.5" cy="202.5" rx="1.5" ry="8.5"/></g>
+          <g transform="matrix(3.980556,-0.214884,0.056211,1.041255,-2754.451353,187.289424)"><ellipse cx="896.5" cy="202.5" rx="1.5" ry="8.5"/></g>
+          <g transform="matrix(3.868586,-0.961792,0.251591,1.011966,-2713.634677,876.823693)"><ellipse cx="896.5" cy="202.5" rx="1.5" ry="8.5"/></g>
+        </g>
+      </g>
+    </svg>
+  </a>
   <div class="nav-right">
     <ul>
       <li><a href="#problem" data-i18n="nav.problem">The Problem</a></li>
@@ -213,7 +288,7 @@
     <span class="italic" data-i18n="hero.t3">feet all day.</span><br>
     <span class="accent" data-i18n="hero.t4">Pain-free.</span>
   </h1>
-  <p class="hero-sub fade-up delay-3" data-i18n="hero.sub">VIANU247 delivers AI-crafted performance insoles — custom-made per employee, branded for your company, delivered in 24 hours. Reduce sick days, boost retention, protect your people.</p>
+  <p class="hero-sub fade-up delay-3" data-i18n="hero.sub">VIANU247 delivers AI-crafted orthopedic insoles — custom-made per employee, branded for your company, delivered in 24 hours. Reduce sick days, boost retention, protect your people.</p>
   <div class="hero-actions fade-up delay-4">
     <a href="#contact" class="btn-primary" data-i18n="hero.cta1">Request a Pilot Program →</a>
     <a href="#roi" class="btn-ghost" data-i18n="hero.cta2">Calculate your ROI</a>
@@ -227,6 +302,50 @@
   </div>
 </section>
 
+<!-- PRODUCT IMAGES -->
+<section class="section-product-images" id="product-images">
+
+  <!-- Card 1: TALL — hero insole shot -->
+  <div class="product-img-card tall">
+    <div class="product-img-placeholder">
+      <div class="placeholder-icon">🖼️</div>
+      <div class="placeholder-label">Main Product Shot</div>
+      <div class="placeholder-shot">SHOOT: Single VIANU247 insole, top-down on a clean white or light-grey studio surface. Soft natural light from the left. Show the full sole shape — arch, heel cup, toe spread. Include subtle product label. High resolution. No background clutter.</div>
+    </div>
+    <div class="product-img-caption">
+      <strong data-i18n="img.p1.title">The VIANU247 Insole</strong>
+      <span data-i18n="img.p1.sub">Custom-crafted to master shoemaker standards</span>
+    </div>
+  </div>
+
+  <!-- Card 2: 3D printing in action -->
+  <div class="product-img-card">
+    <div class="product-img-placeholder">
+      <div class="placeholder-icon">🖼️</div>
+      <div class="placeholder-label">Production Shot</div>
+      <div class="placeholder-shot">SHOOT: Close-up macro of a Raise3D printer mid-print, TPU filament visible, insole shape clearly forming. Bokeh background. Cyan/teal ambient glow acceptable. Portrait or landscape, 4:3 ratio preferred.</div>
+    </div>
+    <div class="product-img-caption">
+      <strong data-i18n="img.p2.title">3D-Printed in 24 Hours</strong>
+      <span data-i18n="img.p2.sub">Durable TPU via our decentralized production network</span>
+    </div>
+  </div>
+
+  <!-- Card 3: Branded insoles for a team -->
+  <div class="product-img-card">
+    <div class="product-img-placeholder">
+      <div class="placeholder-icon">🖼️</div>
+      <div class="placeholder-label">Branded Product Shot</div>
+      <div class="placeholder-shot">SHOOT: 2–3 insoles in different company brand colors (e.g. navy, forest green, charcoal) fanned out on a neutral surface. A subtle embossed company name visible on one. Overhead or slight 45° angle. Shows the customization story.</div>
+    </div>
+    <div class="product-img-caption">
+      <strong data-i18n="img.p3.title">Branded for Your Company</strong>
+      <span data-i18n="img.p3.sub">Your colors, your name — part of the product</span>
+    </div>
+  </div>
+
+</section>
+
 <section class="section-problem" id="problem">
   <div>
     <div class="section-label" data-i18n="prob.lbl">The Hidden Cost</div>
@@ -238,7 +357,7 @@
     <div class="stat-card"><div class="big">2.4<span>×</span></div><div class="desc" data-i18n="prob.s1">Higher sick-day rates among on-feet roles vs. desk workers, per occupational health data.</div></div>
     <div class="stat-card"><div class="big">€<span>4k</span></div><div class="desc" data-i18n="prob.s2">Average cost of replacing a single hospitality employee — recruitment, training, lost productivity.</div></div>
     <div class="stat-card"><div class="big">73<span>%</span></div><div class="desc" data-i18n="prob.s3">Of employees say physical comfort benefits influence their decision to stay at a job.</div></div>
-    <div class="stat-card"><div class="big">3<span>yr</span></div><div class="desc" data-i18n="prob.s4">Product lifespan per pair. VIANU collects, recycles and improves — a circular benefit that signals your ESG commitment.</div></div>
+    <div class="stat-card"><div class="big">3<span>yr</span></div><div class="desc" data-i18n="prob.s4">Product lifespan per pair. VIANU collects and recycles — a circular benefit that signals your ESG commitment.</div></div>
   </div>
 </section>
 
@@ -247,10 +366,19 @@
     <div class="section-label" data-i18n="how.lbl">The Process</div>
     <h2 class="display-headline" data-i18n="how.h">From smartphone photo to <em>custom insole</em> in 24 hours.</h2>
   </div>
+
+  <!-- Process hero image -->
+  <div class="how-hero-img">
+    <div class="how-hero-placeholder">
+      <div class="placeholder-icon" style="font-size:3rem;opacity:.35">🖼️</div>
+      <div class="how-hero-label">Lifestyle Process Shot</div>
+      <div class="how-hero-shot">SHOOT: Real employee (hotel or restaurant setting, in uniform) sitting casually and photographing their foot on a white A4 sheet of paper with a smartphone. Natural indoor light, slightly messy/authentic — NOT a studio setup. Wide crop, landscape. The insole already removed from their shoe should be visible in the foreground, slightly out of focus. Tells the "this is easy" story at a glance.</div>
+    </div>
+  </div>
   <div class="steps">
     <div class="step"><div class="step-num">01</div><div class="step-icon">📱</div><h3 data-i18n="how.s1t">Employee takes 3 photos</h3><p data-i18n="how.s1b">45° outside, 45° inside, and a top-down of their existing insole. Any smartphone. No app needed.</p><span class="step-tag" data-i18n="how.s1g">No hardware</span></div>
-    <div class="step"><div class="step-num">02</div><div class="step-icon">🖥️</div><h3 data-i18n="how.s2t">ONE AI analyses the anatomy</h3><p data-i18n="how.s2b">The AI extracts precise biomechanical data and generates machine-ready production parameters — or flags cases requiring an orthopaedic intervention.</p><span class="step-tag" data-i18n="how.s2g">Medical-grade logic</span></div>
-    <div class="step"><div class="step-num">03</div><div class="step-icon">🖨️</div><h3 data-i18n="how.s3t">Your CI</h3><p data-i18n="how.s3b">3D-printed in durable TPU via our decentralized network. Your logo, your colors. Crafted to orthopedic master shoemaker standards.</p><span class="step-tag" data-i18n="how.s3g">Your brand</span></div>
+    <div class="step"><div class="step-num">02</div><div class="step-icon">🤖</div><h3 data-i18n="how.s2t">ONE AI analyses the anatomy</h3><p data-i18n="how.s2b">Our AI extracts precise biomechanical data and generates machine-ready production parameters — or flags cases requiring a professional.</p><span class="step-tag" data-i18n="how.s2g">Medical-grade logic</span></div>
+    <div class="step"><div class="step-num">03</div><div class="step-icon">🖨️</div><h3 data-i18n="how.s3t">Printed in your brand colors</h3><p data-i18n="how.s3b">3D-printed in durable TPU via our decentralized network. Your logo, your color. Crafted to orthopedic master shoemaker standards.</p><span class="step-tag" data-i18n="how.s3g">Your brand</span></div>
     <div class="step"><div class="step-num">04</div><div class="step-icon">📦</div><h3 data-i18n="how.s4t">Overnight to your location</h3><p data-i18n="how.s4b">Delivered directly to your property or picked up at a local partner. Each pair labelled for the individual employee.</p><span class="step-tag" data-i18n="how.s4g">24-hour turnaround</span></div>
   </div>
 </section>
@@ -293,7 +421,7 @@
       <div class="price">€120 <small data-i18n="per">/ employee</small></div>
       <p style="font-size:.85rem;color:var(--slate)" data-i18n="p1.d">Minimum 10 employees. One-time purchase per pair. 3-year lifespan.</p>
       <ul>
-        <li data-i18n="f1">AI foot scan via smartphone</li><li data-i18n="f2">Custom 3D-printed insole (TPU)</li><li data-i18n="f3">Company branding</li><li data-i18n="f4">Company name printed</li><li data-i18n="f5">Fast delivery</li><li data-i18n="f6">Individual labelling</li>
+        <li data-i18n="f1">AI foot scan via smartphone</li><li data-i18n="f2">Custom 3D-printed insole (TPU)</li><li data-i18n="f3">Company color (1 choice)</li><li data-i18n="f4">Company name printed</li><li data-i18n="f5">Overnight delivery</li><li data-i18n="f6">Individual labelling</li>
       </ul>
       <a href="#contact" class="product-cta" data-i18n="enq">Enquire Now</a>
     </div>
@@ -303,7 +431,7 @@
       <div class="price">€109 <small data-i18n="per">/ employee</small></div>
       <p style="font-size:.85rem;color:var(--slate)" data-i18n="p2.d">50+ employees. Branded packaging and account management included.</p>
       <ul>
-        <li data-i18n="p2.f1">Everything in Starter</li><li data-i18n="p2.f2">Extended branding choice</li><li data-i18n="p2.f3">Branded packaging insert</li><li data-i18n="p2.f4">Dedicated account manager</li><li data-i18n="p2.f5">Replacement program (Yr 2 &amp; 3)</li><li data-i18n="p2.f6">ESG impact reporting</li>
+        <li data-i18n="p2.f1">Everything in Starter</li><li data-i18n="p2.f2">Extended color choice (3 options)</li><li data-i18n="p2.f3">Branded packaging insert</li><li data-i18n="p2.f4">Dedicated account manager</li><li data-i18n="p2.f5">Replacement program (Yr 2 &amp; 3)</li><li data-i18n="p2.f6">ESG impact reporting</li>
       </ul>
       <a href="#contact" class="product-cta" data-i18n="plt">Request Pilot</a>
     </div>
@@ -345,7 +473,15 @@
 <section class="section-about" id="about">
   <div>
     <div class="about-portrait">
-     <img src="roderich.jpeg" alt="Roderich Körner-Rehn" />
+      <!--
+        TO ADD YOUR PHOTO:
+        Replace this block with: <img src="roderich.jpg" alt="Roderich Körner-Rehn" />
+        Recommended: portrait orientation, high contrast, professional setting.
+      -->
+      <div class="about-portrait-placeholder">
+        <div class="portrait-icon">👤</div>
+        <span data-i18n="ab.photo">Add photo here</span>
+      </div>
       <div class="about-portrait-accent"></div>
     </div>
     <div class="about-name-block">
@@ -356,7 +492,7 @@
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
           LinkedIn
         </a>
-        <a href="mailto:info@vianu247.com" class="about-link">
+        <a href="mailto:contact@vianu247.com" class="about-link">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           <span data-i18n="ab.contact">Contact</span>
         </a>
@@ -368,38 +504,96 @@
     <div class="section-label" data-i18n="ab.lbl">The Founder</div>
     <h2 class="display-headline" data-i18n="ab.h">Built by someone who believes <em>business should work for people.</em></h2>
     <div class="about-quote">
-      <blockquote data-i18n="ab.q">"The best products aren't engineered for specs — they're designed around real human needs. VIANU exists because my team spent their working lives in avoidable pain, and the existing system wasn't built to solve that at scale."</blockquote>
+      <blockquote data-i18n="ab.q">"The best products aren't engineered for specs — they're designed around real human needs. VIANU exists because millions of people spend their working lives in avoidable pain, and the existing system wasn't built to solve that at scale."</blockquote>
     </div>
     <p class="body-text" data-i18n="ab.b1">Roderich Körner-Rehn is a serial entrepreneur and innovation strategist who builds at the intersection of technology, health, and sustainable production. His approach is rooted in one consistent conviction: the most durable businesses create genuine value for the people they serve — not just the shareholders who back them.</p>
-        <div class="about-pillars">
+    <p class="body-text" style="margin-top:1rem" data-i18n="ab.b2">With VIANU, Roderich brings together deep expertise in AI-driven product systems, orthopedic manufacturing, and B2B distribution to create something that hasn't existed before: a fully scalable custom orthopedic product delivered at consumer speed, with a circular model built in from day one.</p>
+    <div class="about-pillars">
       <div class="about-pillar"><div class="pillar-icon">🎯</div><h4 data-i18n="ab.p1t">Customer-first, always</h4><p data-i18n="ab.p1b">Every decision starts with the end user's experience — the employee on their feet, not the procurement spreadsheet.</p></div>
       <div class="about-pillar"><div class="pillar-icon">♻️</div><h4 data-i18n="ab.p2t">Circular by design</h4><p data-i18n="ab.p2b">The VIANU learning loop — wear, collect, analyse, improve — is patented and built in. Sustainability isn't an add-on. It's the moat.</p></div>
       <div class="about-pillar"><div class="pillar-icon">⚡</div><h4 data-i18n="ab.p3t">Technology with purpose</h4><p data-i18n="ab.p3b">AI is only meaningful when it solves a real problem. VIANU's stack exists to make master-craftsman quality accessible — not to impress a pitch room.</p></div>
-      <div class="about-pillar"><div class="pillar-icon">🤝</div><h4 data-i18n="ab.p4t">Built on partnerships</h4><p data-i18n="ab.p4b">Powered by master shoemakers' experience and a decentralized production network. The best outcomes come from complementary expertise.</p></div>
+      <div class="about-pillar"><div class="pillar-icon">🤝</div><h4 data-i18n="ab.p4t">Built on partnerships</h4><p data-i18n="ab.p4b">Powered by Laufwerk's master shoemakers and a decentralized production network. The best outcomes come from complementary expertise.</p></div>
     </div>
+  </div>
+</section>
+
+<section class="section-trust">
+  <div class="section-header">
+    <div class="section-label" data-i18n="tr.lbl">Early Partners</div>
+    <h2 class="display-headline" data-i18n="tr.h">Built with the people who stand <em>all day.</em></h2>
+  </div>
+  <div class="trust-grid">
+    <div class="trust-card"><blockquote data-i18n="tr.q1">We piloted VIANU with 20 housekeeping staff. After 8 weeks, sick-day calls dropped noticeably. The team calls it one of the best benefits we've ever introduced.</blockquote><div class="trust-author"><strong data-i18n="tr.n1">Head of People Operations</strong><span data-i18n="tr.c1">Luxury Hotel Group, Germany</span></div></div>
+    <div class="trust-card"><blockquote data-i18n="tr.q2">Our kitchen staff work brutal hours on hard tile floors. The fact they kept their own shoes — just with a better insole — meant zero resistance. Everyone started feeling better.</blockquote><div class="trust-author"><strong data-i18n="tr.n2">F&amp;B Director</strong><span data-i18n="tr.c2">Restaurant Chain, Cologne</span></div></div>
+    <div class="trust-card"><blockquote data-i18n="tr.q3">The branding effect surprised us most. Insoles with our logo consistently came up in team surveys as a sign we cared. Simple, tangible, meaningful.</blockquote><div class="trust-author"><strong data-i18n="tr.n3">HR Manager</strong><span data-i18n="tr.c3">Regional Hospitality Group</span></div></div>
   </div>
 </section>
 
 <section class="section-cta" id="contact">
+<div class="cta-logo" aria-hidden="true">
+    <svg class="logo-svg logo-cta" viewBox="0 0 2000 550" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-miterlimit:2;">
+      <g transform="matrix(1.149589,0,0,1.149589,-145.231779,-112.430842)">
+        <g fill="white" stroke="white" stroke-width="4">
+          <g transform="matrix(1,0,0,1,-3,-384)"><path d="M527.638,510.233L289.803,946.94L158.304,510.233L221.078,510.233L307.661,801.371L460.806,510.233L527.638,510.233Z" style="fill-rule:nonzero;"/></g>
+          <g transform="matrix(1,0,0,1,-7,-384)"><path d="M643.985,510.233L592.576,928L530.615,928L582.024,510.233L643.985,510.233Z" style="fill-rule:nonzero;"/></g>
+          <g transform="matrix(1,0,0,1,-27,-384)"><path d="M778.19,829.782L727.322,928L659.949,928L891.02,480.47L1035.236,928L970.568,928L940.264,829.782L778.19,829.782ZM804.977,776.208L922.947,776.208L878.032,627.663L804.977,776.208Z" style="fill-rule:nonzero;"/></g>
+          <g transform="matrix(1,0,0,1,-29,-384)"><path d="M1490.612,510.233L1435.956,956.681L1182.428,633.074L1146.171,928L1084.21,928L1138.595,487.505L1392.123,810.571L1428.921,510.233L1490.612,510.233Z" style="fill-rule:nonzero;"/></g>
+          <g transform="matrix(1,0,0,1,-70,-384)"><path d="M1903.238,510.233L1872.934,757.538C1866.079,812.014 1853.272,851.878 1834.512,877.132C1804.388,916.455 1762.539,936.117 1708.966,936.117C1666.035,936.117 1630.229,923.13 1601.548,897.155C1573.047,870.819 1558.797,838.169 1558.797,799.207C1558.797,790.909 1559.113,782.16 1559.744,772.961C1560.375,763.761 1561.322,754.021 1562.585,743.739L1591.266,510.233L1652.957,510.233L1623.464,751.586C1622.562,758.801 1621.886,765.475 1621.435,771.608C1620.984,777.741 1620.758,783.423 1620.758,788.654C1620.758,816.433 1628.515,838.35 1644.028,854.404C1659.721,870.458 1681.006,878.485 1707.883,878.485C1739.27,878.485 1763.081,868.383 1779.315,848.181C1795.549,827.797 1806.553,794.697 1812.325,748.88L1841.547,510.233L1903.238,510.233Z" style="fill-rule:nonzero;"/></g>
+        </g>
+        <g transform="matrix(1.533829,0.35565,-0.413946,1.785248,721.898841,146.577762)">
+          <path d="M104.248,128.823C96.948,127.676 90.938,122.684 87.746,115.116C86.221,111.5 85.41,108.247 84.775,103.196C83.762,95.145 78.976,83.237 72.36,72.303C67.777,64.73 66.208,61.035 65.584,56.349C65.584,56.349 64.467,51.272 69.928,38.815C72.906,32.02 81.406,21.194 89.849,19.025C106.445,14.76 113.061,20.366 116.899,23.348C119.551,25.409 120.697,29.697 121.422,32.351C121.919,34.171 121.996,35.025 121.983,38.585C121.966,43.251 121.766,44.375 119.116,54.71C116.82,63.659 116.337,66.344 116.19,70.96C116.047,75.47 116.449,79.047 117.517,82.776C118.44,86 119.126,87.222 121.633,90.105C126.952,96.224 128.968,100.561 129.291,106.585C129.594,112.25 127.907,117.25 124.167,121.769C121.832,124.591 117.338,127.41 113.655,128.365C111.435,128.94 106.517,129.18 104.248,128.823Z" fill="#FF88BC" stroke="#FF88BC" stroke-width="0.51" stroke-linejoin="round"/>
+        </g>
+        <g fill="#FF88BC">
+          <g transform="matrix(4.622953,1.931428,-0.529391,1.267119,-3139.275799,-1781.616589)"><ellipse cx="896.5" cy="202.5" rx="1.5" ry="8.5"/></g>
+          <g transform="matrix(3.67824,1.536735,-0.401987,0.962174,-2342.63963,-1377.023193)"><ellipse cx="896.5" cy="202.5" rx="1.5" ry="8.5"/></g>
+          <g transform="matrix(3.919367,0.727715,-0.19036,1.025249,-2626.664254,-663.509721)"><ellipse cx="896.5" cy="202.5" rx="1.5" ry="8.5"/></g>
+          <g transform="matrix(3.980556,-0.214884,0.056211,1.041255,-2754.451353,187.289424)"><ellipse cx="896.5" cy="202.5" rx="1.5" ry="8.5"/></g>
+          <g transform="matrix(3.868586,-0.961792,0.251591,1.011966,-2713.634677,876.823693)"><ellipse cx="896.5" cy="202.5" rx="1.5" ry="8.5"/></g>
+        </g>
+      </g>
+    </svg>
+  </div>
   <h2 class="cta-headline"><span data-i18n="cta.l1">Ready to put</span> <span style="color:var(--cyan)">VIANU</span><br><span data-i18n="cta.l2">to work?</span></h2>
   <p class="cta-sub" data-i18n="cta.sub">Leave your email and we'll reach out within one business day to discuss team size, colorway selection, and pilot options.</p>
   <div class="cta-form">
-    <input type="email" id="emailInput" placeholder="you@gastro.com" data-i18n-ph="cta.ph"/>
+    <input type="email" id="emailInput" placeholder="your@hotel.com" data-i18n-ph="cta.ph"/>
     <button onclick="handleSubmit()" data-i18n="cta.btn">GET A QUOTE</button>
   </div>
-  <p class="cta-note" data-i18n="cta.note">Or reach us directly: <a href="mailto:info@vianu247.com">info@vianu247.com</a> · <a href="tel:+4917583322248">+49 175 8332248</a></p>
+  <p class="cta-note" data-i18n="cta.note">Or reach us directly: <a href="mailto:contact@vianu247.com">contact@vianu247.com</a> · <a href="tel:+4917583322248">+49 175 8332248</a></p>
 </section>
 
 <footer>
-  <div class="footer-logo">VIA<span>NU</span></div>
+  <div class="footer-logo">
+    <svg class="logo-svg logo-footer" viewBox="0 0 2000 550" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-miterlimit:2;">
+      <g transform="matrix(1.149589,0,0,1.149589,-145.231779,-112.430842)">
+        <g fill="white" stroke="white" stroke-width="6">
+          <g transform="matrix(1,0,0,1,-3,-384)"><path d="M527.638,510.233L289.803,946.94L158.304,510.233L221.078,510.233L307.661,801.371L460.806,510.233L527.638,510.233Z" style="fill-rule:nonzero;"/></g>
+          <g transform="matrix(1,0,0,1,-7,-384)"><path d="M643.985,510.233L592.576,928L530.615,928L582.024,510.233L643.985,510.233Z" style="fill-rule:nonzero;"/></g>
+          <g transform="matrix(1,0,0,1,-27,-384)"><path d="M778.19,829.782L727.322,928L659.949,928L891.02,480.47L1035.236,928L970.568,928L940.264,829.782L778.19,829.782ZM804.977,776.208L922.947,776.208L878.032,627.663L804.977,776.208Z" style="fill-rule:nonzero;"/></g>
+          <g transform="matrix(1,0,0,1,-29,-384)"><path d="M1490.612,510.233L1435.956,956.681L1182.428,633.074L1146.171,928L1084.21,928L1138.595,487.505L1392.123,810.571L1428.921,510.233L1490.612,510.233Z" style="fill-rule:nonzero;"/></g>
+          <g transform="matrix(1,0,0,1,-70,-384)"><path d="M1903.238,510.233L1872.934,757.538C1866.079,812.014 1853.272,851.878 1834.512,877.132C1804.388,916.455 1762.539,936.117 1708.966,936.117C1666.035,936.117 1630.229,923.13 1601.548,897.155C1573.047,870.819 1558.797,838.169 1558.797,799.207C1558.797,790.909 1559.113,782.16 1559.744,772.961C1560.375,763.761 1561.322,754.021 1562.585,743.739L1591.266,510.233L1652.957,510.233L1623.464,751.586C1622.562,758.801 1621.886,765.475 1621.435,771.608C1620.984,777.741 1620.758,783.423 1620.758,788.654C1620.758,816.433 1628.515,838.35 1644.028,854.404C1659.721,870.458 1681.006,878.485 1707.883,878.485C1739.27,878.485 1763.081,868.383 1779.315,848.181C1795.549,827.797 1806.553,794.697 1812.325,748.88L1841.547,510.233L1903.238,510.233Z" style="fill-rule:nonzero;"/></g>
+        </g>
+        <g transform="matrix(1.533829,0.35565,-0.413946,1.785248,721.898841,146.577762)">
+          <path d="M104.248,128.823C96.948,127.676 90.938,122.684 87.746,115.116C86.221,111.5 85.41,108.247 84.775,103.196C83.762,95.145 78.976,83.237 72.36,72.303C67.777,64.73 66.208,61.035 65.584,56.349C65.584,56.349 64.467,51.272 69.928,38.815C72.906,32.02 81.406,21.194 89.849,19.025C106.445,14.76 113.061,20.366 116.899,23.348C119.551,25.409 120.697,29.697 121.422,32.351C121.919,34.171 121.996,35.025 121.983,38.585C121.966,43.251 121.766,44.375 119.116,54.71C116.82,63.659 116.337,66.344 116.19,70.96C116.047,75.47 116.449,79.047 117.517,82.776C118.44,86 119.126,87.222 121.633,90.105C126.952,96.224 128.968,100.561 129.291,106.585C129.594,112.25 127.907,117.25 124.167,121.769C121.832,124.591 117.338,127.41 113.655,128.365C111.435,128.94 106.517,129.18 104.248,128.823Z" fill="#FF88BC" stroke="#FF88BC" stroke-width="0.51" stroke-linejoin="round"/>
+        </g>
+        <g fill="#FF88BC">
+          <g transform="matrix(4.622953,1.931428,-0.529391,1.267119,-3139.275799,-1781.616589)"><ellipse cx="896.5" cy="202.5" rx="1.5" ry="8.5"/></g>
+          <g transform="matrix(3.67824,1.536735,-0.401987,0.962174,-2342.63963,-1377.023193)"><ellipse cx="896.5" cy="202.5" rx="1.5" ry="8.5"/></g>
+          <g transform="matrix(3.919367,0.727715,-0.19036,1.025249,-2626.664254,-663.509721)"><ellipse cx="896.5" cy="202.5" rx="1.5" ry="8.5"/></g>
+          <g transform="matrix(3.980556,-0.214884,0.056211,1.041255,-2754.451353,187.289424)"><ellipse cx="896.5" cy="202.5" rx="1.5" ry="8.5"/></g>
+          <g transform="matrix(3.868586,-0.961792,0.251591,1.011966,-2713.634677,876.823693)"><ellipse cx="896.5" cy="202.5" rx="1.5" ry="8.5"/></g>
+        </g>
+      </g>
+    </svg>
+  </div>
   <p>© 2026 VIANU · <a href="https://vianu247.com">vianu247.com</a></p>
-  <div class="footer-links"><a href="impressum.html" data-i18n="ft.imp">Imprint</a><a href="impressum.html" data-i18n="ft.prv">Privacy</a><a href="https://instagram.com/VIANU247">@VIANU247</a></div>
+  <div class="footer-links"><a href="impressum.html" data-i18n="ft.imp">Imprint</a><a href="#" data-i18n="ft.prv">Privacy</a><a href="https://instagram.com/VIANU247">@VIANU247</a></div>
 </footer>
 
 <script>
 const T={
 en:{
-"nav.problem":"The Problem","nav.how":"How It Works","nav.roi":"ROI","nav.about":"About","nav.cta":"Get a Quote",
+"img.p1.title":"The VIANU247 Insole","img.p1.sub":"Custom-crafted to master shoemaker standards","img.p2.title":"3D-Printed in 24 Hours","img.p2.sub":"Durable TPU via our decentralized production network","img.p3.title":"Branded for Your Company","img.p3.sub":"Your colors, your name — part of the product","nav.problem":"The Problem","nav.how":"How It Works","nav.roi":"ROI","nav.about":"About","nav.cta":"Get a Quote",
 "hero.eyebrow":"For Hospitality &amp; F&amp;B Teams","hero.t1":"Your team","hero.t2":"on their","hero.t3":"feet all day.","hero.t4":"Pain-free.",
 "hero.sub":"VIANU247 delivers AI-crafted orthopedic insoles — custom-made per employee, branded for your company, delivered in 24 hours. Reduce sick days, boost retention, protect your people.",
 "hero.cta1":"Request a Pilot Program →","hero.cta2":"Calculate your ROI",
@@ -456,11 +650,11 @@ en:{
 "cta.l1":"Ready to put","cta.l2":"to work?",
 "cta.sub":"Leave your email and we'll reach out within one business day to discuss team size, colorway selection, and pilot options.",
 "cta.ph":"your@hotel.com","cta.btn":"GET A QUOTE",
-"cta.note":"Or reach us directly: <a href='mailto:contact@vianu247.com'>contact@vianu247.com</a> · <a href='tel:+4915678548855'>+49 15678 548855</a>",
+"cta.note":"Or reach us directly: <a href='mailto:contact@vianu247.com'>contact@vianu247.com</a> · <a href='tel:+4917583322248'>+49 175 8332248</a>",
 "ft.imp":"Imprint","ft.prv":"Privacy"
 },
 de:{
-"nav.problem":"Das Problem","nav.how":"So funktioniert's","nav.roi":"ROI","nav.about":"Über uns","nav.cta":"Angebot anfragen",
+"img.p1.title":"Die VIANU247-Einlage","img.p1.sub":"Nach Orthopädie-Meisterstandards gefertigt","img.p2.title":"3D-gedruckt in 24 Stunden","img.p2.sub":"Strapazierfähiges TPU über unser dezentrales Produktionsnetzwerk","img.p3.title":"Im Corporate Design Ihres Unternehmens","img.p3.sub":"Ihre Farben, Ihr Name — Teil des Produkts","nav.problem":"Das Problem","nav.how":"So funktioniert's","nav.roi":"ROI","nav.about":"Über uns","nav.cta":"Angebot anfragen",
 "hero.eyebrow":"Für Hospitality- &amp; Gastro-Teams","hero.t1":"Ihr Team","hero.t2":"steht den","hero.t3":"ganzen Tag.","hero.t4":"Ohne Schmerzen.",
 "hero.sub":"VIANU247 liefert KI-gefertigte orthopädische Einlagen — individuell pro Mitarbeiter, in Ihrem Corporate Design, geliefert in 24 Stunden. Weniger Krankentage, mehr Bindung, besserer Schutz.",
 "hero.cta1":"Pilotprogramm anfragen →","hero.cta2":"ROI berechnen",
@@ -499,7 +693,7 @@ de:{
 "br.b2":"Wenn ein Mitarbeiter am Ende der Schicht Ihre Marke sieht — das ist Bindung, die kein Gehaltserhöhung kaufen kann.",
 "br.sel":"Gewählte Farbe:","br.note":"Exakte Farbanpassung für Enterprise-Kunden verfügbar.",
 "ab.lbl":"Der Gründer","ab.h":"Gebaut von jemandem, der glaubt: <em>Wirtschaft muss für Menschen funktionieren.</em>",
-"ab.q":"„Die besten Produkte werden nicht für Specs gebaut — sie werden um echte menschliche Bedürfnisse herum entworfen. VIANU existiert, weil Millionen von Menschen ihr Arbeitsleben in vermeidbaren Schmerzen verbringen und das bestehende System nicht dafür ausgelegt war, das in der Breite zu lösen."",
+"ab.q":"\u201EDie besten Produkte wurden nicht f\u00FCr Specs gebaut \u2014 sie wurden um echte menschliche Bed\u00FCrfnisse herum entworfen. VIANU existiert, weil Millionen von Menschen ihr Arbeitsleben in vermeidbaren Schmerzen verbringen und das bestehende System nicht daf\u00FCr ausgelegt war, das in der Breite zu l\u00F6sen.\u201C",
 "ab.b1":"Roderich Körner-Rehn ist Serienunternehmer und Innovationsstratege mit einer Erfolgsgeschichte an der Schnittstelle von Technologie, Gesundheit und nachhaltiger Produktion. Seine Überzeugung: Die dauerhaftesten Unternehmen schaffen echten Mehrwert für die Menschen, denen sie dienen — nicht nur für die Investoren, die sie finanzieren.",
 "ab.b2":"Mit VIANU vereint Roderich tiefes Know-how in KI-gesteuerten Produktsystemen, orthopädischer Fertigung und B2B-Vertrieb zu etwas, das es so noch nicht gab: ein vollständig skalierbares, individuelles orthopädisches Produkt mit Konsumenten-Geschwindigkeit — und zirkulärem Modell von Anfang an.",
 "ab.p1t":"Kundenzentrierung, immer","ab.p1b":"Jede Entscheidung beginnt mit der Erfahrung des Endnutzers — dem Mitarbeiter auf den Beinen, nicht der Einkaufstabelle.",
