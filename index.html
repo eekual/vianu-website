@@ -165,13 +165,27 @@ input[type=range]{width:100%;accent-color:var(--acid);cursor:pointer;margin-bott
 /* BRANDING */
 .section-branding{background:var(--white);display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--rule-light)}
 .brand-left{padding:5rem 4rem;border-right:1px solid var(--rule-light)}
-.brand-right{padding:5rem 4rem;background:#f0ebe4;display:flex;flex-direction:column;justify-content:center}
-.swatches{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:2rem}
-.swatch{width:48px;height:48px;cursor:pointer;border:2px solid transparent;transition:transform .15s}
-.swatch:hover{transform:scale(1.1)}
-.swatch.active{border-color:var(--black)}
-.insole-preview{width:100%;max-width:340px;height:150px;clip-path:polygon(8% 0%,92% 0%,100% 30%,95% 70%,80% 100%,20% 100%,5% 70%,0% 30%);display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-size:1.2rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.4);transition:background .4s;margin:2rem 0}
-.color-name{font-family:var(--font-mono);font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mid)}
+.brand-right{padding:3rem 4rem;background:#f0ebe4;display:flex;flex-direction:column;justify-content:center;align-items:center}
+/* upload area */
+.brand-upload-area{margin-top:2rem}
+.upload-prompt{border:1px dashed var(--rule-light);padding:2rem;text-align:center;cursor:pointer;transition:border-color .2s;margin-top:1.5rem}
+.upload-prompt:hover{border-color:var(--acid)}
+.upload-icon{font-size:2rem;color:var(--mid);margin-bottom:.5rem}
+.upload-label{font-family:var(--font-mono);font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--black);margin-bottom:.3rem}
+.upload-sub{font-family:var(--font-mono);font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mid)}
+.upload-controls{margin-top:1.5rem;display:flex;flex-direction:column;gap:.75rem}
+.ctrl-row{display:grid;grid-template-columns:5rem 1fr;align-items:center;gap:1rem}
+.ctrl-label{font-family:var(--font-mono);font-size:.55rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mid)}
+.ctrl-actions{display:flex;gap:.75rem;margin-top:.5rem}
+.ctrl-btn-reset{font-family:var(--font-mono);font-size:.58rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:.5rem 1rem;border:1px solid var(--rule-light);color:var(--mid);background:none;cursor:pointer;transition:all .15s}
+.ctrl-btn-reset:hover{border-color:var(--black);color:var(--black)}
+.ctrl-btn-dl{font-family:var(--font-mono);font-size:.58rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:.5rem 1rem;background:var(--acid);color:var(--black);display:inline-block;transition:background .15s;text-decoration:none}
+.ctrl-btn-dl:hover{background:var(--black);color:var(--acid)}
+/* canvas */
+.brand-canvas-wrap{position:relative;width:100%;max-width:480px}
+#insoleCanvas{width:100%;height:auto;display:block;border:1px solid var(--rule-light)}
+.canvas-hint{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:#aaa;pointer-events:none;opacity:1;transition:opacity .3s}
+.canvas-hint.hidden{opacity:0}
 /* ABOUT */
 .section-about{background:var(--black);display:grid;grid-template-columns:380px 1fr;border-top:1px solid var(--rule)}
 .about-portrait-col{border-right:1px solid var(--rule);display:flex;flex-direction:column}
@@ -473,24 +487,46 @@ footer p{padding:0 1.5rem;font-family:var(--font-mono);font-size:.52rem;letter-s
   </div>
 </section>
 <!-- BRANDING -->
-<section class="section-branding">
+<section class="section-branding" id="branding">
   <div class="brand-left">
-    <div class="sec-label" data-i18n="br.label">05 — Your Brand</div>
+    <div class="sec-label" data-i18n="br.label">05 &mdash; Your Brand</div>
     <h2 class="t-h2" style="color:var(--black)" data-reveal data-i18n="br.headline">Insoles your<br>team is proud<br>to wear.</h2>
-    <p style="color:#444;margin-top:1.5rem;max-width:380px;font-size:.9rem;line-height:1.8" data-i18n="br.body">Your company colors, your name — embedded at production, not added as a sticker.</p>
-    <div class="swatches" id="swatchRow">
-      <div class="swatch active" style="background:#1a2a3a" data-color="#1a2a3a" data-name-en="Navy Pro" data-name-de="Navy Pro"></div>
-      <div class="swatch" style="background:#2c2c2c" data-color="#2c2c2c" data-name-en="Anthracite" data-name-de="Anthrazit"></div>
-      <div class="swatch" style="background:#8B1a1a" data-color="#8B1a1a" data-name-en="Burgundy" data-name-de="Burgunder"></div>
-      <div class="swatch" style="background:#1a4a2e" data-color="#1a4a2e" data-name-en="Forest" data-name-de="Waldgruen"></div>
-      <div class="swatch" style="background:#4a3520" data-color="#4a3520" data-name-en="Cognac" data-name-de="Cognac"></div>
-      <div class="swatch" style="background:#c8a96e" data-color="#c8a96e" data-name-en="Sand" data-name-de="Sand"></div>
-      <div class="swatch" style="background:#FF88BC" data-color="#FF88BC" data-name-en="Rose" data-name-de="Rose"></div>
+    <p style="color:#444;margin-top:1.5rem;max-width:380px;font-size:.9rem;line-height:1.8" data-i18n="br.body">Your company colors, your name &mdash; embedded at production, not added as a sticker.</p>
+
+    <div class="brand-upload-area" id="uploadArea">
+      <input type="file" id="logoUpload" accept=".svg,.png" style="display:none"/>
+      <div class="upload-prompt" id="uploadPrompt" onclick="document.getElementById('logoUpload').click()">
+        <div class="upload-icon">&#8679;</div>
+        <div class="upload-label" data-i18n="br.upload.label">Upload your logo</div>
+        <div class="upload-sub" data-i18n="br.upload.sub">SVG or PNG &middot; any size</div>
+      </div>
+      <div class="upload-controls" id="uploadControls" style="display:none">
+        <div class="ctrl-row">
+          <span class="ctrl-label" data-i18n="br.ctrl.size">Size</span>
+          <input type="range" id="logoSize" min="5" max="50" value="22" oninput="renderLogo()"/>
+        </div>
+        <div class="ctrl-row">
+          <span class="ctrl-label" data-i18n="br.ctrl.x">Position X</span>
+          <input type="range" id="logoPosX" min="20" max="80" value="50" oninput="renderLogo()"/>
+        </div>
+        <div class="ctrl-row">
+          <span class="ctrl-label" data-i18n="br.ctrl.y">Position Y</span>
+          <input type="range" id="logoPosY" min="5" max="50" value="22" oninput="renderLogo()"/>
+        </div>
+        <div class="ctrl-actions">
+          <button class="ctrl-btn-reset" onclick="resetLogo()" data-i18n="br.ctrl.reset">Remove logo</button>
+          <a id="downloadBtn" class="ctrl-btn-dl" download="vianu-branded-insole.png" data-i18n="br.ctrl.dl">Download preview</a>
+        </div>
+      </div>
     </div>
   </div>
+
   <div class="brand-right">
-    <div class="insole-preview" id="insolePreview" style="background:#1a2a3a">YOUR BRAND</div>
-    <div><div class="color-name"><span data-i18n="br.selected">Selected:</span> <strong id="colorName">Navy Pro</strong></div><p style="font-size:.72rem;color:#888;margin-top:.5rem;font-family:'Space Mono',monospace;letter-spacing:.06em" data-i18n="br.note">Exact matching available for Enterprise.</p></div>
+    <div class="brand-canvas-wrap">
+      <canvas id="insoleCanvas"></canvas>
+      <div class="canvas-hint" id="canvasHint" data-i18n="br.canvas.hint">Upload your logo to see it on the insole</div>
+    </div>
+    <p style="font-size:.7rem;color:#888;margin-top:1rem;font-family:'Space Mono',monospace;letter-spacing:.06em;text-align:center" data-i18n="br.note">Exact color &amp; finish matching available for Enterprise clients.</p>
   </div>
 </section>
 <!-- ABOUT -->
@@ -620,7 +656,7 @@ en:{
 "plt":"Request Pilot","p3.t":"Enterprise","cust":"Custom","p3.sm":"pricing","p3.min":"Multi-property groups",
 "p3.f1":"Everything in Team","p3.f2":"Full custom branding","p3.f3":"Multi-site rollout","p3.f4":"HR system integration","p3.f5":"Analytics dashboard","p3.f6":"Co-branded employer branding",
 "tlk":"Talk to Us",
-"br.label":"05 \u2014 Your Brand","br.headline":"Insoles your<br>team is proud<br>to wear.",
+"br.upload.label":"Upload your logo","br.upload.sub":"SVG or PNG · any size","br.ctrl.size":"Size","br.ctrl.opacity":"Opacity","br.ctrl.x":"Position X","br.ctrl.y":"Position Y","br.ctrl.reset":"Remove logo","br.ctrl.dl":"Download preview","br.canvas.hint":"Upload your logo to see it on the insole","br.label":"05 \u2014 Your Brand","br.headline":"Insoles your<br>team is proud<br>to wear.",
 "br.body":"Your company colors, your name \u2014 embedded at production, not added as a sticker.",
 "br.selected":"Selected:","br.note":"Exact matching available for Enterprise.",
 "moat.label":"06 \u2014 The Moat","moat.headline":"An AI that<br>improves itself<br>with every pair.",
@@ -703,7 +739,7 @@ de:{
 "plt":"Pilot anfragen","p3.t":"Enterprise","cust":"Individuell","p3.sm":"Preis","p3.min":"Multi-Property-Gruppen",
 "p3.f1":"Alles aus Team-Programm","p3.f2":"Vollst\u00e4ndiges Custom Branding","p3.f3":"Multi-Standort-Rollout","p3.f4":"HR-Systemintegration","p3.f5":"Analytics-Dashboard","p3.f6":"Co-gebrandetes Employer Branding",
 "tlk":"Gespr\u00e4ch anfragen",
-"br.label":"05 \u2014 Ihre Marke","br.headline":"Einlagen, auf<br>die Ihr Team<br>stolz ist.",
+"br.upload.label":"Upload your logo","br.upload.sub":"SVG or PNG · any size","br.ctrl.size":"Size","br.ctrl.opacity":"Opacity","br.ctrl.x":"Position X","br.ctrl.y":"Position Y","br.ctrl.reset":"Remove logo","br.ctrl.dl":"Download preview","br.canvas.hint":"Upload your logo to see it on the insole","br.upload.label":"Logo hochladen","br.upload.sub":"SVG oder PNG · beliebige Größe","br.ctrl.size":"Größe","br.ctrl.opacity":"Deckkraft","br.ctrl.x":"Position X","br.ctrl.y":"Position Y","br.ctrl.reset":"Logo entfernen","br.ctrl.dl":"Vorschau laden","br.canvas.hint":"Logo hochladen, um es auf der Einlage zu sehen","br.label":"05 \u2014 Ihre Marke","br.headline":"Einlagen, auf<br>die Ihr Team<br>stolz ist.",
 "br.body":"Ihre Unternehmensfarben, Ihr Name \u2014 bei der Produktion eingepresst, nicht als Aufkleber.",
 "br.selected":"Gew\u00e4hlt:","br.note":"Exakte Farbanpassung f\u00fcr Enterprise-Kunden.",
 "moat.label":"06 \u2014 Der Burggraben","moat.headline":"Eine KI, die<br>sich selbst<br>verbessert.",
@@ -795,6 +831,91 @@ const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersec
 document.querySelectorAll('[data-reveal]').forEach(el=>obs.observe(el));
 setLang(detectLang());
 updateROI();
+
+// ── INSOLE LOGO COMPOSITOR ──
+(function(){
+  const canvas = document.getElementById('insoleCanvas');
+  const ctx = canvas.getContext('2d');
+  const hint = document.getElementById('canvasHint');
+  const baseImg = new Image();
+  let logoImg = null;
+
+  baseImg.onload = function(){
+    canvas.width = baseImg.naturalWidth;
+    canvas.height = baseImg.naturalHeight;
+    ctx.drawImage(baseImg, 0, 0);
+  };
+  baseImg.src = 'images/insole-base.jpg';
+
+  document.getElementById('logoUpload').addEventListener('change', function(e){
+    const file = e.target.files[0];
+    if(!file) return;
+    const reader = new FileReader();
+    reader.onload = function(ev){
+      if(file.type === 'image/svg+xml'){
+        const blob = new Blob([ev.target.result], {type:'image/svg+xml'});
+        const url = URL.createObjectURL(blob);
+        const img = new Image();
+        img.onload = function(){ logoImg = img; showControls(); renderLogo(); URL.revokeObjectURL(url); };
+        img.src = url;
+      } else {
+        const img = new Image();
+        img.onload = function(){ logoImg = img; showControls(); renderLogo(); };
+        img.src = ev.target.result;
+      }
+    };
+    if(file.type === 'image/svg+xml') reader.readAsText(file);
+    else reader.readAsDataURL(file);
+  });
+
+  function showControls(){
+    document.getElementById('uploadPrompt').style.display = 'none';
+    document.getElementById('uploadControls').style.display = 'flex';
+    hint.classList.add('hidden');
+  }
+
+  window.renderLogo = function(){
+    if(!logoImg || !baseImg.complete) return;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(baseImg, 0, 0);
+
+    const sizePct  = parseFloat(document.getElementById('logoSize').value) / 100;
+    const opacity  = 1.0;
+    const xPct     = parseFloat(document.getElementById('logoPosX').value) / 100;
+    const yPct     = parseFloat(document.getElementById('logoPosY').value) / 100;
+
+    // Logo width as % of canvas width
+    const logoW = canvas.width * sizePct;
+    const logoH = logoW * (logoImg.naturalHeight / logoImg.naturalWidth);
+    const x = canvas.width  * xPct - logoW / 2;
+    const y = canvas.height * yPct - logoH / 2;
+
+    ctx.save();
+    // Subtle scale Y compression to sell the flat-surface perspective
+    ctx.transform(1, 0, 0, 0.88, 0, y * 0.12);
+    // Draw logo as solid black: use logo as mask, fill black
+    ctx.drawImage(logoImg, x, y, logoW, logoH);
+    ctx.globalCompositeOperation = 'source-atop';
+    ctx.fillStyle = '#000000';
+    ctx.fillRect(x, y, logoW, logoH);
+    ctx.globalCompositeOperation = 'source-over';
+    ctx.restore();
+
+    // Update download link
+    const dl = document.getElementById('downloadBtn');
+    dl.href = canvas.toDataURL('image/png');
+  };
+
+  window.resetLogo = function(){
+    logoImg = null;
+    document.getElementById('logoUpload').value = '';
+    document.getElementById('uploadControls').style.display = 'none';
+    document.getElementById('uploadPrompt').style.display = 'block';
+    hint.classList.remove('hidden');
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    if(baseImg.complete) ctx.drawImage(baseImg, 0, 0);
+  };
+})();
 </script>
 </body>
 </html>
