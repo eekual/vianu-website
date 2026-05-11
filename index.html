@@ -162,30 +162,6 @@ input[type=range]{width:100%;accent-color:var(--acid);cursor:pointer;margin-bott
 .price-card.featured .price-cta{background:var(--acid);color:var(--black);border-color:var(--acid)}
 .price-cta:hover{border-color:var(--acid);color:var(--acid)}
 .price-card.featured .price-cta:hover{background:var(--white);border-color:var(--white);color:var(--black)}
-/* BRANDING */
-.section-branding{background:var(--white);display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--rule-light)}
-.brand-left{padding:5rem 4rem;border-right:1px solid var(--rule-light)}
-.brand-right{padding:3rem 4rem;background:#f0ebe4;display:flex;flex-direction:column;justify-content:center;align-items:center}
-/* upload area */
-.brand-upload-area{margin-top:2rem}
-.upload-prompt{border:1px dashed var(--rule-light);padding:2rem;text-align:center;cursor:pointer;transition:border-color .2s;margin-top:1.5rem}
-.upload-prompt:hover{border-color:var(--acid)}
-.upload-icon{font-size:2rem;color:var(--mid);margin-bottom:.5rem}
-.upload-label{font-family:var(--font-mono);font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--black);margin-bottom:.3rem}
-.upload-sub{font-family:var(--font-mono);font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mid)}
-.upload-controls{margin-top:1.5rem;display:flex;flex-direction:column;gap:.75rem}
-.ctrl-row{display:grid;grid-template-columns:5rem 1fr;align-items:center;gap:1rem}
-.ctrl-label{font-family:var(--font-mono);font-size:.55rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mid)}
-.ctrl-actions{display:flex;gap:.75rem;margin-top:.5rem}
-.ctrl-btn-reset{font-family:var(--font-mono);font-size:.58rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:.5rem 1rem;border:1px solid var(--rule-light);color:var(--mid);background:none;cursor:pointer;transition:all .15s}
-.ctrl-btn-reset:hover{border-color:var(--black);color:var(--black)}
-.ctrl-btn-dl{font-family:var(--font-mono);font-size:.58rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:.5rem 1rem;background:var(--acid);color:var(--black);display:inline-block;transition:background .15s;text-decoration:none}
-.ctrl-btn-dl:hover{background:var(--black);color:var(--acid)}
-/* canvas */
-.brand-canvas-wrap{position:relative;width:100%;max-width:480px}
-#insoleCanvas{width:100%;height:auto;display:block;border:1px solid var(--rule-light)}
-.canvas-hint{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:#aaa;pointer-events:none;opacity:1;transition:opacity .3s}
-.canvas-hint.hidden{opacity:0}
 /* ABOUT */
 .section-about{background:var(--black);display:grid;grid-template-columns:380px 1fr;border-top:1px solid var(--rule)}
 .about-portrait-col{border-right:1px solid var(--rule);display:flex;flex-direction:column}
@@ -274,7 +250,7 @@ footer p{padding:0 1.5rem;font-family:var(--font-mono);font-size:.52rem;letter-s
   .hero-bar{grid-template-columns:1fr 1fr}
   .section-images{grid-template-columns:1fr 1fr}
   .img-cell.tall{grid-column:span 2;min-height:300px}
-  .section-problem,.section-roi,.section-branding,.section-moat,.section-market,.section-about,.section-cta{grid-template-columns:1fr}
+  .section-problem,.section-roi,.section-about,.section-cta{grid-template-columns:1fr}
   .prob-left,.prob-right,.roi-left,.roi-right,.brand-left,.brand-right,.moat-left,.moat-right,.market-left,.market-right,.cta-left,.cta-right,.about-content{border:none;padding:3rem 1.5rem}
   .prob-right{grid-template-columns:1fr 1fr}
   .moat-right{grid-template-columns:1fr 1fr}
@@ -352,15 +328,15 @@ footer p{padding:0 1.5rem;font-family:var(--font-mono);font-size:.52rem;letter-s
 <!-- IMAGES -->
 <section class="section-images" id="product-images">
   <div class="img-cell tall">
-    <img src="images/printing-process.jpeg" alt="VIANU247 orthopedic insole"/>
+    <img src="images/insole-hero.jpg" alt="VIANU247 orthopedic insole"/>
     <div class="img-caption"><strong data-i18n="img.p1.title">The VIANU247 Insole</strong><span data-i18n="img.p1.sub">Custom-crafted to master shoemaker standards</span></div>
   </div>
   <div class="img-cell">
-    <img src="images/insole-hero.jpeg" alt="3D printing VIANU247" style="height:100%;min-height:260px"/>
+    <img src="images/printing-process.jpg" alt="3D printing VIANU247" style="height:100%;min-height:260px"/>
     <div class="img-caption"><strong data-i18n="img.p2.title">3D-Printed in 24h</strong><span data-i18n="img.p2.sub">Durable TPU, decentralized network</span></div>
   </div>
   <div class="img-cell">
-    <img src="images/branded-insoles.jpeg" alt="Branded VIANU247 insoles" style="height:100%;min-height:260px"/>
+    <img src="images/branded-insoles.jpg" alt="Branded VIANU247 insoles" style="height:100%;min-height:260px"/>
     <div class="img-caption"><strong data-i18n="img.p3.title">Branded for Your Company</strong><span data-i18n="img.p3.sub">Your colors, your name</span></div>
   </div>
 </section>
@@ -486,49 +462,7 @@ footer p{padding:0 1.5rem;font-family:var(--font-mono);font-size:.52rem;letter-s
     </div>
   </div>
 </section>
-<!-- BRANDING -->
-<section class="section-branding" id="branding">
-  <div class="brand-left">
-    <div class="sec-label" data-i18n="br.label">05 &mdash; Your Brand</div>
-    <h2 class="t-h2" style="color:var(--black)" data-reveal data-i18n="br.headline">Insoles your<br>team is proud<br>to wear.</h2>
-    <p style="color:#444;margin-top:1.5rem;max-width:380px;font-size:.9rem;line-height:1.8" data-i18n="br.body">Your company colors, your name &mdash; embedded at production, not added as a sticker.</p>
 
-    <div class="brand-upload-area" id="uploadArea">
-      <input type="file" id="logoUpload" accept=".svg,.png" style="display:none"/>
-      <div class="upload-prompt" id="uploadPrompt" onclick="document.getElementById('logoUpload').click()">
-        <div class="upload-icon">&#8679;</div>
-        <div class="upload-label" data-i18n="br.upload.label">Upload your logo</div>
-        <div class="upload-sub" data-i18n="br.upload.sub">SVG or PNG &middot; any size</div>
-      </div>
-      <div class="upload-controls" id="uploadControls" style="display:none">
-        <div class="ctrl-row">
-          <span class="ctrl-label" data-i18n="br.ctrl.size">Size</span>
-          <input type="range" id="logoSize" min="5" max="50" value="22" oninput="renderLogo()"/>
-        </div>
-        <div class="ctrl-row">
-          <span class="ctrl-label" data-i18n="br.ctrl.x">Position X</span>
-          <input type="range" id="logoPosX" min="20" max="80" value="50" oninput="renderLogo()"/>
-        </div>
-        <div class="ctrl-row">
-          <span class="ctrl-label" data-i18n="br.ctrl.y">Position Y</span>
-          <input type="range" id="logoPosY" min="5" max="50" value="22" oninput="renderLogo()"/>
-        </div>
-        <div class="ctrl-actions">
-          <button class="ctrl-btn-reset" onclick="resetLogo()" data-i18n="br.ctrl.reset">Remove logo</button>
-          <a id="downloadBtn" class="ctrl-btn-dl" download="vianu-branded-insole.png" data-i18n="br.ctrl.dl">Download preview</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="brand-right">
-    <div class="brand-canvas-wrap">
-      <canvas id="insoleCanvas"></canvas>
-      <div class="canvas-hint" id="canvasHint" data-i18n="br.canvas.hint">Upload your logo to see it on the insole</div>
-    </div>
-    <p style="font-size:.7rem;color:#888;margin-top:1rem;font-family:'Space Mono',monospace;letter-spacing:.06em;text-align:center" data-i18n="br.note">Exact color &amp; finish matching available for Enterprise clients.</p>
-  </div>
-</section>
 <!-- ABOUT -->
 <section class="section-about" id="about">
   <div class="about-portrait-col">
@@ -548,7 +482,7 @@ footer p{padding:0 1.5rem;font-family:var(--font-mono);font-size:.52rem;letter-s
     </div>
   </div>
   <div class="about-content">
-    <div class="sec-label" style="color:#444" data-i18n="ab.label">06 — The Founder</div>
+    <div class="sec-label" style="color:#444" data-i18n="ab.label">05 — The Founder</div>
     <h2 class="t-h2 about-headline" data-reveal data-i18n="ab.headline">Built by someone<br>who believes business<br>should work for people.</h2>
     <div class="about-quote" data-reveal>
       <blockquote data-i18n="ab.quote">"The best products aren't engineered for specs — they're designed around real human needs. VIANU exists because millions of people spend their working lives in avoidable pain."</blockquote>
@@ -565,7 +499,7 @@ footer p{padding:0 1.5rem;font-family:var(--font-mono);font-size:.52rem;letter-s
 </section>
 <!-- TESTIMONIALS -->
 <section class="section-quotes">
-  <div class="quotes-header"><div class="sec-label" data-i18n="tr.label">07 — Early Partners</div><h2 class="t-h2" data-reveal data-i18n="tr.headline">Built with the people<br>who stand all day.</h2></div>
+  <div class="quotes-header"><div class="sec-label" data-i18n="tr.label">06 — Early Partners</div><h2 class="t-h2" data-reveal data-i18n="tr.headline">Built with the people<br>who stand all day.</h2></div>
   <div class="quotes-grid">
     <div class="quote-card" data-reveal><div class="quote-mark">"</div><p class="quote-text" data-i18n="tr.q1">We piloted VIANU with 20 housekeeping staff. After 8 weeks, sick-day calls dropped noticeably. The team calls it one of the best benefits we've ever introduced.</p><div class="quote-divider"></div><div class="quote-author" data-i18n="tr.n1">Head of People Operations</div><div class="quote-company" data-i18n="tr.c1">Luxury Hotel Group, Germany</div></div>
     <div class="quote-card" data-reveal><div class="quote-mark">"</div><p class="quote-text" data-i18n="tr.q2">Our kitchen staff work brutal hours on hard tile. The fact they kept their own shoes — just with a better insole — meant zero resistance. Everyone started feeling better.</p><div class="quote-divider"></div><div class="quote-author" data-i18n="tr.n2">F&amp;B Director</div><div class="quote-company" data-i18n="tr.c2">Restaurant Chain, Cologne</div></div>
@@ -576,7 +510,7 @@ footer p{padding:0 1.5rem;font-family:var(--font-mono);font-size:.52rem;letter-s
 <section class="section-cta" id="contact">
   <div class="cta-left">
     <div>
-      <div class="sec-label" style="color:#444" data-i18n="cta.label">08 — Next Steps</div>
+      <div class="sec-label" style="color:#444" data-i18n="cta.label">07 — Next Steps</div>
       <h2 class="t-h1 cta-headline" data-i18n="cta.headline">Ready to put<br><span class="acid">VIANU</span><br>to work?</h2>
       <p class="cta-sub" data-i18n="cta.sub">Leave your email and we'll reach out within one business day — team size, color selection, and pilot terms.</p>
     </div>
@@ -832,90 +766,7 @@ document.querySelectorAll('[data-reveal]').forEach(el=>obs.observe(el));
 setLang(detectLang());
 updateROI();
 
-// ── INSOLE LOGO COMPOSITOR ──
-(function(){
-  const canvas = document.getElementById('insoleCanvas');
-  const ctx = canvas.getContext('2d');
-  const hint = document.getElementById('canvasHint');
-  const baseImg = new Image();
-  let logoImg = null;
 
-  baseImg.onload = function(){
-    canvas.width = baseImg.naturalWidth;
-    canvas.height = baseImg.naturalHeight;
-    ctx.drawImage(baseImg, 0, 0);
-  };
-  baseImg.src = 'images/insole-base.jpg';
-
-  document.getElementById('logoUpload').addEventListener('change', function(e){
-    const file = e.target.files[0];
-    if(!file) return;
-    const reader = new FileReader();
-    reader.onload = function(ev){
-      if(file.type === 'image/svg+xml'){
-        const blob = new Blob([ev.target.result], {type:'image/svg+xml'});
-        const url = URL.createObjectURL(blob);
-        const img = new Image();
-        img.onload = function(){ logoImg = img; showControls(); renderLogo(); URL.revokeObjectURL(url); };
-        img.src = url;
-      } else {
-        const img = new Image();
-        img.onload = function(){ logoImg = img; showControls(); renderLogo(); };
-        img.src = ev.target.result;
-      }
-    };
-    if(file.type === 'image/svg+xml') reader.readAsText(file);
-    else reader.readAsDataURL(file);
-  });
-
-  function showControls(){
-    document.getElementById('uploadPrompt').style.display = 'none';
-    document.getElementById('uploadControls').style.display = 'flex';
-    hint.classList.add('hidden');
-  }
-
-  window.renderLogo = function(){
-    if(!logoImg || !baseImg.complete) return;
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.drawImage(baseImg, 0, 0);
-
-    const sizePct  = parseFloat(document.getElementById('logoSize').value) / 100;
-    const opacity  = 1.0;
-    const xPct     = parseFloat(document.getElementById('logoPosX').value) / 100;
-    const yPct     = parseFloat(document.getElementById('logoPosY').value) / 100;
-
-    // Logo width as % of canvas width
-    const logoW = canvas.width * sizePct;
-    const logoH = logoW * (logoImg.naturalHeight / logoImg.naturalWidth);
-    const x = canvas.width  * xPct - logoW / 2;
-    const y = canvas.height * yPct - logoH / 2;
-
-    ctx.save();
-    // Subtle scale Y compression to sell the flat-surface perspective
-    ctx.transform(1, 0, 0, 0.88, 0, y * 0.12);
-    // Draw logo as solid black: use logo as mask, fill black
-    ctx.drawImage(logoImg, x, y, logoW, logoH);
-    ctx.globalCompositeOperation = 'source-atop';
-    ctx.fillStyle = '#000000';
-    ctx.fillRect(x, y, logoW, logoH);
-    ctx.globalCompositeOperation = 'source-over';
-    ctx.restore();
-
-    // Update download link
-    const dl = document.getElementById('downloadBtn');
-    dl.href = canvas.toDataURL('image/png');
-  };
-
-  window.resetLogo = function(){
-    logoImg = null;
-    document.getElementById('logoUpload').value = '';
-    document.getElementById('uploadControls').style.display = 'none';
-    document.getElementById('uploadPrompt').style.display = 'block';
-    hint.classList.remove('hidden');
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    if(baseImg.complete) ctx.drawImage(baseImg, 0, 0);
-  };
-})();
 </script>
 </body>
 </html>
