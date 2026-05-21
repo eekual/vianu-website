@@ -130,21 +130,22 @@ nav ul a:hover{color:var(--acid)}
 .rb-title{font-family:var(--font-head);font-weight:700;font-size:.95rem;letter-spacing:.06em;text-transform:uppercase;color:var(--black);margin-bottom:.2rem}
 .rb-desc{font-size:.85rem;color:#555;line-height:1.6}
 /* Watt calculator */
-.watt-calc{background:var(--black);padding:2.5rem;margin-top:auto}
-.watt-calc-head{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--acid);margin-bottom:.5rem}
-.watt-calc-sub{font-family:var(--font-mono);font-size:.55rem;letter-spacing:.12em;color:#aaa;margin-bottom:2rem}
+.rev-calc{background:var(--black);padding:2.5rem;margin-top:auto}
+.rev-calc-head{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--acid);margin-bottom:.5rem}
+.rev-calc-sub{font-family:var(--font-mono);font-size:.55rem;letter-spacing:.12em;color:#aaa;margin-bottom:2rem}
 .slider-wrap label{font-family:var(--font-mono);font-size:.55rem;letter-spacing:.16em;text-transform:uppercase;color:#aaa;display:block;margin-bottom:.6rem}
 input[type=range]{width:100%;accent-color:var(--acid);cursor:pointer;margin-bottom:.5rem}
-.slider-val{font-family:var(--font-head);font-weight:900;font-size:3rem;color:var(--acid);line-height:1}
+.slider-val{font-family:var(--font-head);font-weight:900;font-size:2.5rem;color:var(--acid);line-height:1}
 .slider-unit{font-family:var(--font-mono);font-size:.6rem;color:#aaa;letter-spacing:.1em}
-.watt-row{display:flex;justify-content:space-between;align-items:baseline;padding:.75rem 0;border-bottom:1px solid #1e1e1e}
-.watt-row:last-of-type{border-bottom:none}
-.watt-row-label{font-family:var(--font-mono);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:#aaa}
-.watt-row-val{font-family:var(--font-head);font-weight:700;font-size:1.1rem;color:var(--white)}
-.watt-row-val.accent{color:var(--acid)}
-.watt-total{margin-top:1.5rem;padding:1.5rem;background:#0f0f0f;display:flex;justify-content:space-between;align-items:center;border-left:4px solid var(--acid)}
-.watt-total-label{font-family:var(--font-mono);font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:#aaa}
-.watt-total-val{font-family:var(--font-head);font-weight:900;font-size:2.5rem;color:var(--acid);letter-spacing:-.02em}
+.rev-row{display:flex;justify-content:space-between;align-items:baseline;padding:.75rem 0;border-bottom:1px solid #1e1e1e}
+.rev-row:last-of-type{border-bottom:none}
+.rev-row-label{font-family:var(--font-mono);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:#aaa}
+.rev-row-val{font-family:var(--font-head);font-weight:700;font-size:1.1rem;color:var(--white)}
+.rev-row-val.accent{color:var(--acid)}
+.rev-highlight{margin-top:1.5rem;padding:1.5rem;background:#0f0f0f;border-left:4px solid var(--acid)}
+.rev-highlight-label{font-family:var(--font-mono);font-size:.52rem;letter-spacing:.18em;text-transform:uppercase;color:#aaa;margin-bottom:.5rem}
+.rev-highlight-val{font-family:var(--font-head);font-weight:900;font-size:2.5rem;color:var(--acid);letter-spacing:-.02em;line-height:1}
+.rev-highlight-sub{font-family:var(--font-mono);font-size:.52rem;letter-spacing:.12em;color:#555;margin-top:.4rem}
 /* BIKEFITTER */
 .section-fitter{background:var(--black);display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--rule)}
 .fitter-left{padding:5rem 4rem;border-right:1px solid var(--rule)}
@@ -349,11 +350,11 @@ footer p{padding:0 1.5rem;font-family:var(--font-mono);font-size:.52rem;letter-s
 <!-- IMAGES -->
 <section class="section-images" id="product-images">
   <div class="img-cell tall">
-    <img src="images/cycle-hero.jpg" alt="VIANUcycle cycling insole"/>
+    <img src="images/insole-hero.jpg" alt="VIANUcycle cycling insole"/>
     <div class="img-caption"><strong data-i18n="img.p1.title">The VIANUcycle Insole</strong><span data-i18n="img.p1.sub">Engineered for stiff-soled cycling shoes</span></div>
   </div>
   <div class="img-cell">
-    <img src="images/insole-hero.jpg" alt="3D printing VIANUcycle insole" style="height:100%;min-height:260px"/>
+    <img src="images/printing-process.jpg" alt="3D printing VIANUcycle insole" style="height:100%;min-height:260px"/>
     <div class="img-caption"><strong data-i18n="img.p2.title">3D-Printed in 24h</strong><span data-i18n="img.p2.sub">High-stiffness TPU, decentralized network</span></div>
   </div>
   <div class="img-cell">
@@ -439,26 +440,45 @@ footer p{padding:0 1.5rem;font-family:var(--font-mono);font-size:.52rem;letter-s
   </div>
   <div class="ben-right">
     <div>
-      <div class="sec-label" data-i18n="calc.label">Watt Calculator</div>
-      <p style="color:#444;font-size:.9rem;line-height:1.7;max-width:360px;margin-bottom:2rem" data-i18n="calc.intro">Studies show up to 10% efficiency gain with proper foot support. See what that means for your FTP.</p>
+      <div class="sec-label" data-i18n="calc.label">For Bike Fitters</div>
+      <p style="color:#444;font-size:.9rem;line-height:1.7;max-width:360px;margin-bottom:2rem" data-i18n="calc.intro">No stock. No equipment. Just a new revenue line that completes every fitting you already do.</p>
     </div>
-    <div class="watt-calc">
-      <div class="watt-calc-head" data-i18n="calc.head">Power Gain Estimator</div>
-      <div class="watt-calc-sub" data-i18n="calc.sub">adjust to your current FTP</div>
-      <div class="slider-wrap" style="margin-bottom:2rem">
-        <label data-i18n="calc.label2">current FTP</label>
-        <input type="range" id="ftpSlider" min="100" max="500" value="250" step="5" oninput="updateWatts()"/>
-        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:.5rem">
-          <span class="slider-val" id="ftpDisplay">250</span>
-          <span class="slider-unit">W</span>
+    <div class="rev-calc">
+      <div class="rev-calc-head" data-i18n="calc.head">Fitter Revenue Estimator</div>
+      <div class="rev-calc-sub" data-i18n="calc.sub">adjust to your studio</div>
+      <div class="slider-wrap">
+        <label data-i18n="calc.s1">fittings per week</label>
+        <input type="range" id="fitsSlider" min="1" max="20" value="6" step="1" oninput="updateRevenue()"/>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:.25rem;margin-bottom:1.25rem">
+          <span class="slider-val" id="fitsDisplay">6</span>
+          <span class="slider-unit" data-i18n="calc.s1unit">fittings / week</span>
         </div>
       </div>
-      <div class="watt-row"><span class="watt-row-label" data-i18n="calc.r1">Efficiency gain (5%)</span><span class="watt-row-val accent" id="gain5">+13W</span></div>
-      <div class="watt-row"><span class="watt-row-label" data-i18n="calc.r2">Efficiency gain (10%)</span><span class="watt-row-val accent" id="gain10">+25W</span></div>
-      <div class="watt-row"><span class="watt-row-label" data-i18n="calc.r3">Cost per watt gained</span><span class="watt-row-val" id="costPerWatt">&euro;4.80</span></div>
-      <div class="watt-total"><span class="watt-total-label" data-i18n="calc.total">Insole price</span><span class="watt-total-val">&euro;120</span></div>
-      <a href="#contact" style="display:block;margin-top:1.5rem;background:var(--acid);color:var(--black);font-family:var(--font-mono);font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:.85rem;text-align:center;transition:background .15s" href="#contact" data-i18n="calc.cta">Order Yours &rarr;</a>
-      <a href="evidence.html" style="display:block;margin-top:.75rem;text-align:center;font-family:var(--font-mono);font-size:.55rem;letter-spacing:.14em;text-transform:uppercase;color:#555;transition:color .15s" onmouseover="this.style.color='#C5FA1F'" onmouseout="this.style.color='#555'" data-i18n="calc.sources">View sources &amp; evidence &rarr;</a>
+      <div class="slider-wrap">
+        <label data-i18n="calc.s2">conversion rate</label>
+        <input type="range" id="convSlider" min="10" max="90" value="50" step="5" oninput="updateRevenue()"/>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:.25rem;margin-bottom:1.25rem">
+          <span class="slider-val" id="convDisplay">50</span>
+          <span class="slider-unit">%</span>
+        </div>
+      </div>
+      <div class="slider-wrap">
+        <label data-i18n="calc.s3">your markup per pair</label>
+        <input type="range" id="markupSlider" min="0" max="80" value="40" step="5" oninput="updateRevenue()"/>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:.25rem;margin-bottom:1.5rem">
+          <span class="slider-val">&euro;<span id="markupDisplay">40</span></span>
+          <span class="slider-unit" data-i18n="calc.s3unit">per pair</span>
+        </div>
+      </div>
+      <div class="rev-row"><span class="rev-row-label" data-i18n="calc.r1">Pairs sold / month</span><span class="rev-row-val accent" id="pairsMonth">13</span></div>
+      <div class="rev-row"><span class="rev-row-label" data-i18n="calc.r2">Revenue added / month</span><span class="rev-row-val accent" id="revMonth">&euro;520</span></div>
+      <div class="rev-row"><span class="rev-row-label" data-i18n="calc.r3">Revenue / fitting session</span><span class="rev-row-val" id="revPerFit">&euro;20</span></div>
+      <div class="rev-highlight">
+        <div class="rev-highlight-label" data-i18n="calc.total">Annual revenue added</div>
+        <div class="rev-highlight-val" id="revYear">&euro;6,240</div>
+        <div class="rev-highlight-sub" data-i18n="calc.note">Zero stock. Zero upfront cost. Pure margin.</div>
+      </div>
+      <a href="#contact" style="display:block;margin-top:1.5rem;background:var(--acid);color:var(--black);font-family:var(--font-mono);font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:.85rem;text-align:center;transition:background .15s" data-i18n="calc.cta">Become a Partner &rarr;</a>
     </div>
   </div>
 </section>
@@ -816,10 +836,7 @@ de:{
 "msg.b2.t":"Anfahren-Stoppen-Effizienz","msg.b2.d":"Trackstand, Sprint, Bremsen, wiederholen. Individuelle Einlagen erhalten die Tretmechanik \u00fcber hunderte Beschleunigungszyklen pro Schicht.",
 "msg.b3.t":"Belastetes Fahren","msg.b3.d":"Ladungsgewicht verschiebt den Schwerpunkt. Fu\u00dfunterst\u00fctzung kompensiert die ver\u00e4nderte Lastverteilung \u2014 reduziert Knie- und R\u00fcckenbelastung.",
 "msg.b4.t":"Ganzj\u00e4hrige Langlebigkeit","msg.b4.d":"TPU-Konstruktion h\u00e4lt t\u00e4glichem Einsatz bei allen Bedingungen stand. 3-J\u00e4hrige Lebensdauer f\u00fcr professionelle Kilometerleistung.",
-"calc.label":"Watt-Rechner","calc.intro":"Studien zeigen bis zu 10% Effizienzgewinn mit richtiger Fu\u00dfunterst\u00fctzung. Sieh was das f\u00fcr deine FTP bedeutet.",
-"calc.head":"Leistungsgewinn-Rechner","calc.sub":"auf deine aktuelle FTP einstellen","calc.label2":"aktuelle FTP",
-"calc.r1":"Effizienzgewinn (5%)","calc.r2":"Effizienzgewinn (10%)","calc.r3":"Kosten pro gewonnenem Watt","calc.total":"Einlagenpreis",
-"calc.cta":"Jetzt bestellen \u2192",
+"calc.label":"Für Bikefitter","calc.intro":"Kein Lager. Keine Ausrüstung. Nur eine neue Umsatzlinie, die jedes Fitting ergänzt.","calc.head":"Umsatz-Rechner","calc.sub":"auf dein Studio einstellen","calc.s1":"Fittings pro Woche","calc.s1unit":"Fittings / Woche","calc.s2":"Konversionsrate","calc.s3":"Deine Marge pro Paar","calc.s3unit":"pro Paar","calc.r1":"Verkaufte Paare / Monat","calc.r2":"Umsatz hinzugefügt / Monat","calc.r3":"Umsatz / Fitting-Session","calc.total":"Jährlicher Zusatzumsatz","calc.note":"Kein Lager. Keine Vorabkosten. Reine Marge.","calc.cta":"Partner werden →",
 "fit.label":"04 \u2014 F\u00fcr Bikefitter","fit.headline":"Das Upsell,<br>das dein Fitting<br>vervollst\u00e4ndigt.",
 "fit.body":"Ein Bike Fitting ohne Fu\u00dfanalyse steht auf Sand. VIANUcycle gibt dir einen nahtlosen Weg, diese L\u00fccke zu schlie\u00dfen \u2014 und eine sinnvolle Umsatzlinie hinzuzuf\u00fcgen \u2014 ohne Investition in Lager, Ausr\u00fcstung oder Schulung.",
 "fit.body2":"Die meisten Fitter verweisen Kunden bereits an Podologen f\u00fcr Einlagen. Jetzt wird diese Weiterleitung zum Umsatz, den du beh\u00e4ltst \u2014 overnight geliefert mit deinem Namen auf dem Produkt.",
@@ -874,6 +891,23 @@ de:{
 
 let lang='en';
 function detectLang(){const l=(navigator.language||'en').toLowerCase();return(l.startsWith('de')||l.startsWith('at'))?'de':'en';}
+function updateRevenue(){
+  const fits=parseInt(document.getElementById('fitsSlider').value);
+  const conv=parseInt(document.getElementById('convSlider').value)/100;
+  const markup=parseInt(document.getElementById('markupSlider').value);
+  document.getElementById('fitsDisplay').textContent=fits;
+  document.getElementById('convDisplay').textContent=Math.round(conv*100);
+  document.getElementById('markupDisplay').textContent=markup;
+  const pairsMonth=Math.round(fits*conv*4.33);
+  const revMonth=pairsMonth*markup;
+  const revYear=revMonth*12;
+  const revPerFit=fits*4.33>0?Math.round(revMonth/(fits*4.33)):0;
+  const loc=lang==='de'?'de-DE':'en-GB';
+  document.getElementById('pairsMonth').textContent=pairsMonth;
+  document.getElementById('revMonth').textContent='\u20ac'+revMonth.toLocaleString(loc);
+  document.getElementById('revPerFit').textContent='\u20ac'+revPerFit;
+  document.getElementById('revYear').textContent='\u20ac'+revYear.toLocaleString(loc);
+}
 function setLang(l){
   lang=l;
   document.documentElement.lang=l;
@@ -883,18 +917,9 @@ function setLang(l){
   document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n');if(d[k]!==undefined)el.innerHTML=d[k];});
   document.querySelectorAll('[data-i18n-ph]').forEach(el=>{const k=el.getAttribute('data-i18n-ph');if(d[k]!==undefined)el.placeholder=d[k];});
   document.title=l==='de'?'VIANUcycle \u2014 Jedes Watt z\u00e4hlt':'VIANUcycle \u2014 Every Watt Counts';
-  updateWatts();
+  updateRevenue();
 }
-function updateWatts(){
-  const ftp=parseInt(document.getElementById('ftpSlider').value);
-  document.getElementById('ftpDisplay').textContent=ftp;
-  const g5=Math.round(ftp*0.05);
-  const g10=Math.round(ftp*0.10);
-  const cpp=(120/((g5+g10)/2)).toFixed(2);
-  document.getElementById('gain5').textContent='+'+g5+'W';
-  document.getElementById('gain10').textContent='+'+g10+'W';
-  document.getElementById('costPerWatt').textContent='\u20ac'+cpp;
-}
+
 function switchTab(id){
   document.querySelectorAll('.rider-tab').forEach(t=>t.classList.remove('active'));
   document.querySelectorAll('.rider-panel').forEach(p=>p.classList.remove('active'));
@@ -910,7 +935,7 @@ function handleSubmit(){
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:.08});
 document.querySelectorAll('[data-reveal]').forEach(el=>obs.observe(el));
 setLang(detectLang());
-updateWatts();
+updateRevenue();
 </script>
 </body>
 </html>
