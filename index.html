@@ -268,6 +268,23 @@ footer p{padding:0 1.5rem;font-family:var(--font-mono);font-size:.52rem;letter-s
   .how-header{padding:2rem 1.5rem 1rem}
   .how-count{font-size:4rem}
 }
+
+    /* ── HubSpot dark overrides (VIANU247) ── */
+    .hs-form-frame{display:block;margin-bottom:1rem}
+    .hs-form-frame iframe{width:100%!important;border:none!important;background:transparent!important}
+    .hs-form-frame .hs-form,.hs-form-frame form.hs-form{background:transparent!important}
+    .hs-form-frame .hs-form-field label,.hs-form-frame .hs-field-desc{color:#6b6b6b!important;font-family:'Space Mono',monospace!important;font-size:.58rem!important;letter-spacing:.14em!important;text-transform:uppercase!important}
+    .hs-form-frame input[type=text],.hs-form-frame input[type=email],.hs-form-frame input[type=tel],.hs-form-frame input[type=number],.hs-form-frame select,.hs-form-frame textarea{background:#111!important;border:1px solid #222!important;border-radius:0!important;color:#f5f0eb!important;font-family:'Space Mono',monospace!important;font-size:.7rem!important;padding:.8rem 1rem!important;width:100%!important;outline:none!important;transition:border-color .15s!important;box-shadow:none!important;-webkit-appearance:none!important}
+    .hs-form-frame input[type=text]:focus,.hs-form-frame input[type=email]:focus,.hs-form-frame input[type=tel]:focus,.hs-form-frame select:focus,.hs-form-frame textarea:focus{border-color:rgba(197,250,31,.5)!important}
+    .hs-form-frame input::placeholder,.hs-form-frame textarea::placeholder{color:#333!important}
+    .hs-form-frame select option{background:#111;color:#f5f0eb}
+    .hs-form-frame .hs-button,.hs-form-frame input[type=submit]{background:#C5FA1F!important;color:#0a0a0a!important;font-family:'Space Mono',monospace!important;font-size:.65rem!important;font-weight:700!important;letter-spacing:.14em!important;text-transform:uppercase!important;border:none!important;border-radius:0!important;padding:.85rem 2rem!important;cursor:pointer!important;width:100%!important;transition:background .15s!important;box-shadow:none!important}
+    .hs-form-frame .hs-button:hover,.hs-form-frame input[type=submit]:hover{background:#f5f0eb!important}
+    .hs-form-frame .hs-error-msgs label,.hs-form-frame .hs-main-font-element{color:#f59e0b!important;font-family:'Space Mono',monospace!important;font-size:.58rem!important}
+    .hs-form-frame .submitted-message{color:#C5FA1F!important;font-family:'Space Mono',monospace!important;font-size:.7rem!important;letter-spacing:.1em!important;text-transform:uppercase!important;padding:1rem 0!important}
+    .hs-form-frame .legal-consent-container,.hs-form-frame .hs-richtext{color:#333!important;font-size:.72rem!important;line-height:1.7!important}
+    .hs-form-frame .hs-form-booleancheckbox-display input,.hs-form-frame .hs-form-checkbox-display input{accent-color:#C5FA1F!important}
+    .hs-form-frame .inputs-list{list-style:none!important;padding:0!important}
 </style>
 
 <script type="application/ld+json">
@@ -325,6 +342,7 @@ footer p{padding:0 1.5rem;font-family:var(--font-mono);font-size:.52rem;letter-s
 }
 </script>
 
+  <script src="https://js-eu1.hsforms.net/forms/embed/148774847.js" defer></script>
 </head>
 <body>
 <!-- NAV -->
@@ -579,10 +597,7 @@ footer p{padding:0 1.5rem;font-family:var(--font-mono);font-size:.52rem;letter-s
   <div class="cta-right">
     <div>
       <span class="cta-form-label" data-i18n="cta.form.label">get in touch — we respond within one business day</span>
-      <div class="cta-input-row">
-        <input type="email" class="cta-input" id="emailInput" placeholder="your@hotel.com" data-i18n-ph="cta.ph"/>
-        <button class="cta-submit" onclick="handleSubmit()" data-i18n="cta.btn">GET A QUOTE</button>
-      </div>
+      <div class="hs-form-frame" data-region="eu1" data-form-id="a048fcc4-ec61-45dc-b6d2-1be8d7bdbb37" data-portal-id="148774847" style="margin-bottom:1rem"></div>
       <div class="cta-note" data-i18n="cta.note">Or directly: <a href="mailto:contact@vianu247.com">contact@vianu247.com</a> &middot; <a href="tel:+4917583322248">+49 175 8332248</a></div>
     </div>
     <div class="contact-grid">
